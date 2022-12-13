@@ -10,12 +10,5 @@ mirror:
      - name: stable-4.10
  operators:
    - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.10
- helm:
-   repos:
-     - name: redhat-helm-charts
-       url: https://raw.githubusercontent.com/redhat-developer/redhat-helm-charts/master
-       charts:
-         - name: ibm-mongodb-enterprise-helm
-           version: 0.2.0
  additionalImages:
    - name: registry.redhat.io/ubi8/ubi:latest
