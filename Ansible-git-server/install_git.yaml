@@ -28,10 +28,10 @@
         owner: git
         group: git
         recurse: True
-    - name: copy ssh key using FILEGLOB
-      authorized_key:
-        key: "{{ lookup('file', item) }}"
-        user: "{{ username }}"
-        state: present
-        exclusive: False
-      with_fileglob: ../files/*.pub
+#    - name: copy ssh key using FILEGLOB
+#      authorized_key:
+#        key: "{{ lookup('file', item) }}"
+#        user: "{{ username }}"
+#        state: present
+#        exclusive: False
+#      with_fileglob: ../files/*.pub
