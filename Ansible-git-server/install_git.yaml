@@ -1,0 +1,37 @@
+- hosts: "{{ hostname }}"
+  gather_facts: False
+  vars:
+    - packages: ["git", "nmap"]
+    - username: git
+    - git_base_dir: /home/git
+    - project: gitops
+  tasks:
+    - name: Installing {{ packages }} on {{ hostname }}
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_items: "{{ packages }}"
+    - name: create and/or change {{ username}}'s  password
+      user:
+        name: "{{ username }}"
+        password: "{{ lookup('password', '/dev/null chars=ascii_letters,digits length=15') }}"
+    - name: git init --bare {{ project }} with the command module
+      command: git init --bare {{project}}
+      args:
+        chdir: "{{ git_base_dir }}"
+      become_user: git
+    - name: Set the permissions on {{ git_base_dir }}/{{ project }}
+      file:
+        path: "{{ git_base_dir }}/{{ project }}"
+        state: directory:
+        mode: 0755
+        owner: git
+        group: git
+        recurse: True
+    - name: copy ssh key using FILEGLOB
+      authorized_key:
+        key: "{{ lookup('file', item) }}"
+        user: "{{ username }}"
+        state: present
+        exclusive: False
+      with_fileglob: ../files/*.pub
