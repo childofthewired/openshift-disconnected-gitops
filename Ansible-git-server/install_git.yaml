@@ -23,7 +23,7 @@
     - name: Set the permissions on {{ git_base_dir }}/{{ project }}
       file:
         path: "{{ git_base_dir }}/{{ project }}"
-        state: directory:
+        state: directory
         mode: 0755
         owner: git
         group: git
