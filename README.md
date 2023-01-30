@@ -1,16 +1,16 @@
-#openshift-disconnected-gitops
+openshift-disconnected-gitops
 
-##aka: Project Genesis
+aka: Project Genesis
 
 Documenting the process of automating disconnected (airgapped) installations of Red Hat OpenShift using GitOps
 
-###Why operate OpenShift in an air gapped network?
+why operate OpenShift in an air gapped network?
 
 It comes down to security and control. Data must be physically transferred into an air gapped environment. This means that exfiltration of data generated in the environment typylcally requires physical access to the systems in the air gapped environment.
 
 This is typically used in Law Enforcement, the Military, Banking, Scientific Computing, and in industrial control networks.
 
-###What tools do we have to work with?
+What tools do we have to work with?
 
 OpenShift is part of a large ecosystem of tools that have been able to operate in disconnected networks. A lot of work was done by the Red Hat Government Team, and without them, the current tools wouldn't exist:
 
