@@ -23,3 +23,5 @@ OpenShift is part of a large ecosystem of tools that have been able to operate i
 As an added difficulty, we will automate much of the Day2 operations of the cluster configuration using OpenShift GitOps.
 
 The advantage of this, is that architects, developers, engineers and administrators looking to deploy a system like this can practice the deployment on a connected system and develop a working configuration. The tested and working configurations of OpenShift and the applications to be deployed may be configured as Applications in OpenShift GitOps and synced via git.
+
+![This is a diagram of the disconnected Openshift environment](https://github.com/childofthewired/openshift-disconnected-gitops/blob/67edca520f4ddd3985c8ec57f8f3f121cd015c02/DisconnectedOpenShiftwithGitOpsDiagram.svg)
