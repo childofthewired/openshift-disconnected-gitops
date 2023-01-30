@@ -14,15 +14,11 @@ This is typically used in Law Enforcement, the Military, Banking, Scientific Com
 
 OpenShift is part of a large ecosystem of tools that have been able to operate in disconnected networks. A lot of work was done by the Red Hat Government Team, and without them, the current tools wouldn't exist:
 
-<div>
-<a href="https://docs.openshift.com/container-platform/latest/installing/disconnected_install/installing-mirroring-disconnected.html"
->oc-mirror - A tool for mirroring images, Operators and Helm charts stored in OCI registries</a>
-</div>
 
-<div>
-<a href="https://docs.openshift.com/container-platform/latest/installing/disconnected_install/installing-mirroring-creating-registry.html"
->Mirror Registry for Red Hat OpenShift - A self contained Quay Registry built for disconnected environments</a>
-</div>
+[oc-mirror - A tool for mirroring images, Operators and Helm charts stored in OCI registries](https://docs.openshift.com/container-platform/latest/installing/disconnected_install/installing-mirroring-disconnected.html)
+
+[Mirror Registry for Red Hat OpenShift - A self contained Quay Registry built for disconnected environments](https://docs.openshift.com/container-platform/latest/installing/disconnected_install/installing-mirroring-creating-registry.html)
+
 
 As an added difficulty, we will automate much of the Day2 operations of the cluster configuration using OpenShift GitOps.
 
